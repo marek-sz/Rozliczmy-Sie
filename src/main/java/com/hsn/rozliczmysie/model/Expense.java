@@ -11,7 +11,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Expense {
 
     @Id

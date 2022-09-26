@@ -1,25 +1,21 @@
-package com.hsn.rozliczmysie.model;
+package com.hsn.rozliczmysie.dto;
 
+import com.hsn.rozliczmysie.model.Expense;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
-public class Trip {
+public class TripDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private LocalDate startDate;
     private LocalDate endDate;
-
-    @OneToMany
-    private List<Expense> expenses;
+    private List<Expense> expenses = new ArrayList<>();
 
 }
