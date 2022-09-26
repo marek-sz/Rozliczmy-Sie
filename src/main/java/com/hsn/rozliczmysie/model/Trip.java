@@ -1,4 +1,4 @@
-package com.hsn.rozliczmysie;
+package com.hsn.rozliczmysie.model;
 
 import lombok.Getter;
 import lombok.Setter;
