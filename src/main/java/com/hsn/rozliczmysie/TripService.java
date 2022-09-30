@@ -21,6 +21,10 @@ public class TripService {
                 .collect(Collectors.toList());
     }
 
+    public TripDTO getTrip(final Long tripId) {
+        return tripMapper.tripToTripDTO(tripRepository.findById(tripId).orElseThrow());
+    }
+
     public void create(final TripDTO tripDTO) {
         final Trip trip = tripMapper.toTrip(tripDTO);
         tripRepository.save(trip);
