@@ -1,6 +1,5 @@
 package com.hsn.rozliczmysie.dto;
 
-import com.hsn.rozliczmysie.model.Expense;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,10 +11,9 @@ import java.util.List;
 @Setter
 public class TripDTO {
 
-    private Long id;
     private String name;
     private LocalDate startDate;
     private LocalDate endDate;
-    private List<Expense> expenses = new ArrayList<>();
+    private List<ExpenseDTO> expenses = new ArrayList<>();
 
 }
