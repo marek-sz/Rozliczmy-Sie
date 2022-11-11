@@ -17,16 +17,16 @@ public class TripService {
 
     public List<TripDTO> getTrips() {
         return tripRepository.findAll().stream()
-                .map(tripMapper::tripToTripDTO)
+                .map(tripMapper::toDto)
                 .collect(Collectors.toList());
     }
 
     public TripDTO getTrip(final Long tripId) {
-        return tripMapper.tripToTripDTO(tripRepository.findById(tripId).orElseThrow());
+        return tripMapper.toDto(tripRepository.findById(tripId).orElseThrow());
     }
 
     public void create(final TripDTO tripDTO) {
-        final Trip trip = tripMapper.toTrip(tripDTO);
+        final Trip trip = tripMapper.toEntity(tripDTO);
         tripRepository.save(trip);
     }
 }
