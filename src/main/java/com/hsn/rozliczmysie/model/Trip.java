@@ -19,7 +19,7 @@ public class Trip {
     private LocalDate startDate;
     private LocalDate endDate;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL)
     private List<Expense> expenses;
 
 }
