@@ -1,5 +1,7 @@
-package com.hsn.rozliczmysie.model;
+package com.hsn.rozliczmysie.user;
 
+
+import com.hsn.rozliczmysie.trip.Trip;
 import lombok.Getter;
 import lombok.Setter;
 

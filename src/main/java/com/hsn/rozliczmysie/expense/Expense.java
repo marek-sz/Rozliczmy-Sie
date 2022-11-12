@@ -1,5 +1,6 @@
-package com.hsn.rozliczmysie.model;
+package com.hsn.rozliczmysie.expense;
 
+import com.hsn.rozliczmysie.trip.Trip;
 import lombok.Getter;
 import lombok.Setter;
 

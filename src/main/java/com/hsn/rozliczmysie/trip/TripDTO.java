@@ -1,5 +1,6 @@
-package com.hsn.rozliczmysie.dto;
+package com.hsn.rozliczmysie.trip;
 
+import com.hsn.rozliczmysie.expense.ExpenseDTO;
 import lombok.Getter;
 import lombok.Setter;
 

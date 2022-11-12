@@ -1,5 +1,6 @@
-package com.hsn.rozliczmysie.model;
+package com.hsn.rozliczmysie.trip;
 
+import com.hsn.rozliczmysie.expense.Expense;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,7 +20,7 @@ public class Trip {
     private LocalDate startDate;
     private LocalDate endDate;
 
-    @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "trip")
     private List<Expense> expenses;
 
 }

@@ -1,6 +1,5 @@
-package com.hsn.rozliczmysie;
+package com.hsn.rozliczmysie.trip;
 
-import com.hsn.rozliczmysie.dto.TripDTO;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

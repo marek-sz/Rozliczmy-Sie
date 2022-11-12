@@ -1,7 +1,5 @@
-package com.hsn.rozliczmysie;
+package com.hsn.rozliczmysie.trip;
 
-import com.hsn.rozliczmysie.dto.TripDTO;
-import com.hsn.rozliczmysie.model.Trip;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
