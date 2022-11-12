@@ -19,4 +19,9 @@ public class ExpenseService {
         expense.setTrip(trip);
         expenseRepository.save(expense);
     }
+
+    public ExpenseDTO getById(final Long expenseId) {
+        final Expense expense = expenseRepository.findById(expenseId).orElseThrow();
+        return expenseMapper.toDto(expense);
+    }
 }

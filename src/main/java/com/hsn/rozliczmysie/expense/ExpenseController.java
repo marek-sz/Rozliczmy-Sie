@@ -19,4 +19,9 @@ public class ExpenseController {
         expenseService.create(tripId, expenseDTO);
     }
 
+    @GetMapping("api/expenses/{expenseId}")
+    @ResponseStatus(HttpStatus.OK)
+    public ExpenseDTO get(@PathVariable Long expenseId) {
+        return expenseService.getById(expenseId);
+    }
 }
