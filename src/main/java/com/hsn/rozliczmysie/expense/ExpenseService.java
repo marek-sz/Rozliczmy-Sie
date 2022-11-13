@@ -5,6 +5,8 @@ import com.hsn.rozliczmysie.trip.Trip;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ExpenseService {
@@ -23,5 +25,10 @@ public class ExpenseService {
     public ExpenseDTO getById(final Long expenseId) {
         final Expense expense = expenseRepository.findById(expenseId).orElseThrow();
         return expenseMapper.toDto(expense);
+    }
+
+    public List<ExpenseDTO> getExpenses(final Long tripId) {
+        final List<Expense> expenses = expenseRepository.findByTripId(tripId);
+        return expenseMapper.toDto(expenses);
     }
 }
