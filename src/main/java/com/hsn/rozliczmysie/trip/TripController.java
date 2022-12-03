@@ -23,11 +23,13 @@ public class TripController {
     }
 
     @GetMapping("api/trips")
+    @ResponseStatus(HttpStatus.OK)
     public List<TripDTO> getTrips() {
         return tripService.getTrips();
     }
 
     @GetMapping("api/trips/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public TripDTO getTrips(@PathVariable @NonNull Long id) {
         return tripService.getTrip(id);
     }

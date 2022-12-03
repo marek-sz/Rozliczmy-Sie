@@ -1,6 +1,7 @@
 package com.hsn.rozliczmysie.user;
 
 
+import com.hsn.rozliczmysie.expense.Expense;
 import com.hsn.rozliczmysie.trip.Trip;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,4 +22,7 @@ public class User {
 
     @OneToMany
     private List<Trip> trips;
+
+    @OneToMany
+    private List<Expense> expenses;
 }

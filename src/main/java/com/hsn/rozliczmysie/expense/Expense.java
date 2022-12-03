@@ -1,6 +1,7 @@
 package com.hsn.rozliczmysie.expense;
 
 import com.hsn.rozliczmysie.trip.Trip;
+import com.hsn.rozliczmysie.user.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,4 +24,8 @@ public class Expense {
     @ManyToOne
     @JoinColumn(name = "trip_id")
     private Trip trip;
+
+    @ManyToOne
+    @JoinColumn(name = "expense_owner_id")
+    private User expenseOwner;
 }
