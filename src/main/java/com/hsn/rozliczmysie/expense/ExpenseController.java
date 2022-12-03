@@ -15,10 +15,10 @@ public class ExpenseController {
 
     private final ExpenseService expenseService;
 
-    @PostMapping("api/trips/{tripId}/expenses")
+    @PostMapping("api/trips/{tripId}/expenses/{userId}")
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@PathVariable Long tripId, @RequestBody @NonNull ExpenseDTO expenseDTO) {
-        expenseService.create(tripId, expenseDTO);
+    public void create(@PathVariable Long tripId, @PathVariable Long userId, @RequestBody @NonNull ExpenseDTO expenseDTO) {
+        expenseService.create(tripId, userId, expenseDTO);
     }
 
     @GetMapping("api/trips/{tripId}/expenses/{expenseId}")
